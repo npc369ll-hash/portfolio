@@ -198,7 +198,6 @@
             overflow: hidden;
             box-shadow: 6px 6px 0 var(--border);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer;
             display: flex;
             flex-direction: column;
         }
@@ -214,6 +213,7 @@
             border-bottom: 2px solid var(--border);
             overflow: hidden;
             background: #e2e8f0;
+            cursor: pointer;
         }
 
         .cert-img-wrapper img {
@@ -229,6 +229,9 @@
 
         .cert-info {
             padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
         }
 
         .cert-tag {
@@ -237,12 +240,34 @@
             font-weight: 700;
             color: var(--accent2);
             text-transform: uppercase;
-            margin-bottom: 0.3rem;
         }
 
         .cert-name {
             font-size: 1.1rem;
             font-weight: 700;
+        }
+
+        /* Download Button Styling */
+        .download-btn {
+            display: inline-block;
+            text-align: center;
+            background: var(--ink);
+            color: var(--paper);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 10px 16px;
+            border-radius: 4px;
+            border: 1.5px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+            margin-top: 0.3rem;
+        }
+
+        .download-btn:hover {
+            background: var(--accent);
+            color: #ffffff;
         }
 
         /* --- LIGHTBOX MODAL --- */
@@ -319,57 +344,72 @@
 
     <div class="cert-grid">
         <!-- JS Certificate -->
-        <div class="cert-card" onclick="openModal('js.jpeg')">
-            <div class="cert-img-wrapper">
+        <div class="cert-card">
+            <div class="cert-img-wrapper" onclick="openModal('js.jpeg')">
                 <img src="js.jpeg" alt="JavaScript Certificate" loading="lazy">
             </div>
             <div class="cert-info">
-                <div class="cert-tag">Frontend Development</div>
-                <div class="cert-name">JavaScript Certification</div>
+                <div>
+                    <div class="cert-tag">Frontend Development</div>
+                    <div class="cert-name">JavaScript Certification</div>
+                </div>
+                <a href="js.jpeg" download="JavaScript_Certificate.jpeg" class="download-btn">Download Certificate</a>
             </div>
         </div>
 
         <!-- Java Certificate -->
-        <div class="cert-card" onclick="openModal('java.jpeg')">
-            <div class="cert-img-wrapper">
+        <div class="cert-card">
+            <div class="cert-img-wrapper" onclick="openModal('java.jpeg')">
                 <img src="java.jpeg" alt="Java Certificate" loading="lazy">
             </div>
             <div class="cert-info">
-                <div class="cert-tag">Programming</div>
-                <div class="cert-name">Java Programming</div>
+                <div>
+                    <div class="cert-tag">Programming</div>
+                    <div class="cert-name">Java Programming</div>
+                </div>
+                <a href="java.jpeg" download="Java_Certificate.jpeg" class="download-btn">Download Certificate</a>
             </div>
         </div>
 
         <!-- Python Certificate -->
-        <div class="cert-card" onclick="openModal('python.jpeg')">
-            <div class="cert-img-wrapper">
+        <div class="cert-card">
+            <div class="cert-img-wrapper" onclick="openModal('python.jpeg')">
                 <img src="python.jpeg" alt="Python Certificate" loading="lazy">
             </div>
             <div class="cert-info">
-                <div class="cert-tag">Core Development</div>
-                <div class="cert-name">Python Specialization</div>
+                <div>
+                    <div class="cert-tag">Core Development</div>
+                    <div class="cert-name">Python Specialization</div>
+                </div>
+                <a href="python.jpeg" download="Python_Certificate.jpeg" class="download-btn">Download Certificate</a>
             </div>
         </div>
 
         <!-- Internship Certificate -->
-        <div class="cert-card" onclick="openModal('intern.jpeg')">
-            <div class="cert-img-wrapper">
+        <div class="cert-card">
+            <div class="cert-img-wrapper" onclick="openModal('intern.jpeg')">
                 <img src="intern.jpeg" alt="Internship Certificate" loading="lazy">
             </div>
             <div class="cert-info">
-                <div class="cert-tag">Experience</div>
-                <div class="cert-name">Internship Completion</div>
+                <div>
+                    <div class="cert-tag">Experience</div>
+                    <div class="cert-name">Internship Completion</div>
+                </div>
+                <a href="intern.jpeg" download="Internship_Certificate.jpeg" class="download-btn">Download Certificate</a>
             </div>
         </div>
 
         <!-- Additional Certificate -->
-        <div class="cert-card" onclick="openModal('an.jpeg')">
-            <div class="cert-img-wrapper">
+        <div class="cert-card">
+            <div class="cert-img-wrapper" onclick="openModal('an.jpeg')">
                 <img src="an.jpeg" alt="Additional Certificate" loading="lazy">
             </div>
             <div class="cert-info">
-                <div class="cert-tag">Skill Verification</div>
-                <div class="cert-name">Technical Certificate</div>
+                <div>
+                    <div class="cert-tag">Skill Verification</div>
+                    <div class="cert-name">Technical Certificate</div>
+                </div>
+                <a href="an.jpeg" download="Technical_Certificate.jpeg" class="download-btn">Download Certificate</a>
             </div>
         </div>
     </div>
